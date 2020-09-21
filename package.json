@@ -1,0 +1,41 @@
+{
+  "name": "has-script",
+  "version": "1.0.0",
+  "description": "Check if package.json contains a script",
+  "license": "MIT",
+  "author": {
+    "name": "Connor White",
+    "email": "connor.bcw@gmail.com",
+    "url": "https://connorwhite.org"
+  },
+  "homepage": "https://connorwhite.org/github/has-script",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bconnorwhite/has-script.git"
+  },
+  "keywords": [],
+  "files": [
+    "build"
+  ],
+  "main": "./build/index.js",
+  "scripts": {
+    "build": "bob build",
+    "lint": "bob lint",
+    "postversion": "git push",
+    "prepublishOnly": "yarn run lint && yarn run build && yarn run test",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@bconnorwhite/package": "^4.2.1"
+  },
+  "devDependencies": {
+    "@bconnorwhite/bob": "^2.3.1",
+    "jest": "^26.4.2"
+  },
+  "eslintConfig": {
+    "extends": "eslint-config-bob"
+  },
+  "npmpackagejsonlint": {
+    "extends": "npm-package-json-lint-config-bob"
+  }
+}

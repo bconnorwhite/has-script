@@ -1,4 +1,5 @@
-const { hasScript, hasScriptLike } = require("../build");
+import { test, expect } from "@jest/globals";
+import { hasScript, hasScriptLike } from "../source/index.js";
 
 test("hasScript true", () => {
   hasScript("build").then((result) => {

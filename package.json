@@ -2,40 +2,53 @@
   "name": "has-script",
   "version": "1.0.0",
   "description": "Check if package.json contains a script",
+  "main": ".auto/build/index.js",
+  "author": "Connor White",
   "license": "MIT",
-  "author": {
-    "name": "Connor White",
-    "email": "connor.bcw@gmail.com",
-    "url": "https://connorwhite.org"
-  },
-  "homepage": "https://connorwhite.org/github/has-script",
+  "private": false,
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bconnorwhite/has-script.git"
   },
-  "keywords": [],
-  "files": [
-    "build"
+  "keywords": [
+    "package",
+    "json",
+    "script",
+    "scripts",
+    "exists",
+    "has"
   ],
-  "main": "./build/index.js",
+  "exports": "./.auto/build/index.js",
+  "types": ".auto/build/index.d.js",
+  "files": [
+    ".auto/build/**/!(tsconfig.tsbuildinfo)"
+  ],
+  "engines": {
+    "node": "^14.13.1 || >=16.0.0"
+  },
   "scripts": {
-    "build": "bob build",
-    "lint": "bob lint",
-    "postversion": "git push",
-    "prepublishOnly": "yarn run lint && yarn run build && yarn run test",
-    "test": "jest"
+    "build": "auto build",
+    "dev": "auto dev",
+    "lint": "auto lint",
+    "prepack": "yarn build",
+    "release": "auto release",
+    "test": "auto test",
+    "typecheck": "auto typecheck"
   },
   "dependencies": {
-    "@bconnorwhite/package": "^4.2.1"
+    "file-structure": "^1.6.2"
   },
   "devDependencies": {
-    "@bconnorwhite/bob": "^2.3.1",
-    "jest": "^26.4.2"
+    "autorepo": "^0.1.4"
   },
   "eslintConfig": {
-    "extends": "eslint-config-bob"
+    "extends": "@autosoft/eslint-config"
+  },
+  "jest": {
+    "preset": "@autosoft/jest-preset"
   },
   "npmpackagejsonlint": {
-    "extends": "npm-package-json-lint-config-bob"
+    "extends": "npm-package-json-lint-config-auto"
   }
 }

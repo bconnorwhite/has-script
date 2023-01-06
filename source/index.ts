@@ -1,7 +1,10 @@
-import { getPackageJSON } from "@bconnorwhite/package";
+import { root, packageJSONFile } from "file-structure";
 
 export async function getScripts() {
-  return getPackageJSON().read().then((pkg) => {
+  const structure = root({
+    pkgJSON: packageJSONFile()
+  });
+  return structure.files().pkgJSON.read().then((pkg) => {
     return pkg?.scripts;
   });
 }
@@ -15,7 +18,7 @@ export async function hasScriptLike(regex: RegExp) {
           retval.push(name);
         }
         return retval;
-      }, [] as string[])
+      }, [] as string[]);
     } else {
       return [];
     }

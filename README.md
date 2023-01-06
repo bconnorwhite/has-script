@@ -1,34 +1,48 @@
-<div align="center">
+<!--BEGIN HEADER-->
+<div id="top" align="center">
   <h1>has-script</h1>
   <a href="https://npmjs.com/package/has-script">
     <img alt="npm" src="https://img.shields.io/npm/v/has-script.svg">
   </a>
   <a href="https://github.com/bconnorwhite/has-script">
-    <img alt="typescript" src="https://img.shields.io/badge/TypeScript-%F0%9F%91%8D-blue.svg">
-  </a>
-  <a href="https://github.com/bconnorwhite/has-script">
-    <img alt="GitHub stars" src="https://img.shields.io/github/stars/bconnorwhite/has-script?label=Stars%20Appreciated%21&style=social">
-  </a>
-  <a href="https://twitter.com/bconnorwhite">
-    <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/bconnorwhite.svg?label=%40bconnorwhite&style=social">
+    <img alt="typescript" src="https://img.shields.io/github/languages/top/bconnorwhite/has-script.svg">
   </a>
 </div>
 
 <br />
 
-> Check if package.json contains a script.
+<blockquote align="center">Check if package.json contains a script.</blockquote>
+
+<br />
+
+_If I should maintain this repo, please ⭐️_
+<a href="https://github.com/bconnorwhite/has-script">
+  <img align="right" alt="GitHub stars" src="https://img.shields.io/github/stars/bconnorwhite/has-script?label=%E2%AD%90%EF%B8%8F&style=social">
+</a>
+
+_DM me on [Twitter](https://twitter.com/bconnorwhite) if you have questions or suggestions._
+<a href="https://twitter.com/bconnorwhite">
+  <img align="right" alt="Twitter Follow" src="https://img.shields.io/twitter/url?label=%40bconnorwhite&style=social&url=https%3A%2F%2Ftwitter.com%2Fbconnorwhite">
+</a>
+
+---
+<!--END HEADER-->
 
 ## Installation
 
-```bash
+```sh
 yarn add has-script
 ```
 
-```bash
+```sh
 npm install has-script
 ```
 
-## API
+```sh
+pnpm add has-script
+```
+
+## Usage
 
 ```ts
 import { hasScript, hasScriptLike } from "has-script";
@@ -40,21 +54,25 @@ function hasScript(name: string): Promise<boolean>;
 function hasScriptLike(regex: RegExp): Promise<string[]>;
 ```
 
-<br />
-
-<h2>Dependencies<img align="right" alt="dependencies" src="https://img.shields.io/david/bconnorwhite/has-script.svg"></h2>
-
-- [@bconnorwhite/package](https://www.npmjs.com/package/@bconnorwhite/package): A utility for reading package.json of a project, and forming paths relative to it.
+<!--BEGIN FOOTER-->
 
 <br />
 
-<h2>Dev Dependencies<img align="right" alt="David" src="https://img.shields.io/david/dev/bconnorwhite/has-script.svg"></h2>
+<h2 id="dependencies">Dependencies<a href="https://www.npmjs.com/package/has-script?activeTab=dependencies"><img align="right" alt="dependencies" src="https://img.shields.io/librariesio/release/npm/has-script.svg"></a></h2>
 
-- [@bconnorwhite/bob](https://www.npmjs.com/package/@bconnorwhite/bob): Bob is a toolkit for TypeScript projects
-- [jest](https://www.npmjs.com/package/jest): Delightful JavaScript Testing.
+- [file-structure](https://www.npmjs.com/package/file-structure): Define and manage file structures
+
 
 <br />
 
-<h2>License <img align="right" alt="license" src="https://img.shields.io/npm/l/has-script.svg"></h2>
+<h3>Dev Dependencies</h3>
 
-[MIT](https://opensource.org/licenses/MIT)
+- [autorepo](https://www.npmjs.com/package/autorepo): Autorepo abstracts away your dev dependencies, providing a single command to run all of your scripts.
+
+
+<br />
+
+<h2 id="license">License <a href="https://opensource.org/licenses/MIT"><img align="right" alt="license" src="https://img.shields.io/npm/l/has-script.svg"></a></h2>
+
+[MIT](https://opensource.org/licenses/MIT) - _The MIT License_
+<!--END FOOTER-->
